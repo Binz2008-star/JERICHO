@@ -29,9 +29,14 @@ export const MAX_RETRIES = 3;
 export interface RunSnapshot { readonly state: RunState; readonly retries: number; }
 
 export class InvalidTransitionError extends Error {
-  constructor(readonly from: RunState, readonly to: RunState) {
+  readonly from: RunState;
+  readonly to: RunState;
+
+  constructor(from: RunState, to: RunState) {
     super(`Invalid run transition: ${from} -> ${to}`);
     this.name = "InvalidTransitionError";
+    this.from = from;
+    this.to = to;
   }
 }
 
