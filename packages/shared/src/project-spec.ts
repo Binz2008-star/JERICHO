@@ -3,10 +3,10 @@ import { z } from "zod";
 export const LocaleSchema = z.enum(["ar", "en"]);
 export type Locale = z.infer<typeof LocaleSchema>;
 
-export const CreateProjectInputSchema = z.object({
+export const CreateProjectInputSchema = z.strictObject({
   prompt: z.string().trim().min(3).max(4000),
   locale: LocaleSchema,
-}).strict();
+});
 export type CreateProjectInput = z.infer<typeof CreateProjectInputSchema>;
 
 /** Rejects traversal, absolute paths, NUL and backslashes in generated file paths. */
