@@ -1,2 +1,2 @@
-export * from "./run-state";
-export * from "./project-spec";
+export * from "./run-state.ts";
+export * from "./project-spec.ts";

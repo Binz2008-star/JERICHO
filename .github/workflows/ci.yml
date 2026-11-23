@@ -17,4 +17,5 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm test
       - run: pnpm build
+      - run: pnpm --filter @jericho/api smoke
       - run: pnpm audit --prod --audit-level=high
