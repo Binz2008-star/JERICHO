@@ -1,0 +1,4 @@
+{ "name": "@jericho/api", "version": "0.0.0", "private": true, "type": "module",
+  "scripts": { "typecheck": "tsc -p . --noEmit", "test": "vitest run", "build": "tsc -p . --noEmit", "dev": "node --experimental-strip-types src/server.ts" },
+  "dependencies": { "@jericho/shared": "workspace:*", "hono": "^4.6.0", "@hono/node-server": "^1.13.0" },
+  "devDependencies": { "@types/node": "^22.0.0" } }
