@@ -10,3 +10,8 @@
 - D9 Sandbox: E2B — Proposed; BLOCKED (no key/authorization; pricing/limits unverified).
 - D10 Neon isolation strategy (project-per-tenant vs branch vs schema) — Proposed; BLOCKED on authorization; decide with cost data.
 - D11 AI provider: Vercel AI SDK + one real provider + labelled deterministic dev adapter — Proposed.
+- D12 Constrained generation first: typed AppSpec -> static templates (code never interpolated from prompts/spec) — Verified locally (builder tests, XSS test).
+- D13 Generated-app data lives outside code snapshots; undo never reverts data — Verified locally.
+- D14 LocalProcessSandbox is DEV ONLY, `isolated=false`; production requires isolated provider — Implemented; E2B BLOCKED.
+- D15 Cost accounting in integer micro-USD, prices injected (never hardcoded) — Verified (unit tests).
+- D16 Evals/economics spike (EXPERIMENT_001) before further UI work — Approved by owner 2026-11-23; local part Verified, live part BLOCKED.
