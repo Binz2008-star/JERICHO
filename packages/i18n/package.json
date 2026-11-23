@@ -1,0 +1,3 @@
+{ "name": "@jericho/i18n", "version": "0.0.0", "private": true, "type": "module",
+  "main": "src/index.ts", "types": "src/index.ts",
+  "scripts": { "typecheck": "tsc -p . --noEmit", "test": "vitest run", "build": "tsc -p . --noEmit" } }

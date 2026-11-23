@@ -1,0 +1,12 @@
+# Decisions (Proposed | Approved | Implemented | Verified | Blocked)
+- D1 Modular monolith + separate builder worker — Proposed (owner directive §5).
+- D2 pnpm workspace, TypeScript strict (+noUncheckedIndexedAccess) — Verified (`pnpm check`).
+- D3 Server-controlled run state machine, bounded retries (max 3), terminal states final — Verified (19 unit tests).
+- D4 Zod `.strict()` inputs; client cannot supply workspace_id/user_id — Verified (api + shared tests).
+- D5 Hono for API (small, typed, testable via `app.request`) — Implemented.
+- D6 Structured i18n resources (ar/en parity test), RTL via `dir` — Implemented; no browser E2E yet.
+- D7 bolt.diy reuse: NO-GO (see LICENSE_AUDIT.md) — Verified (inspection).
+- D8 Auth: use proven library (Better Auth / Lucia-class), not hand-rolled — Proposed, unchosen.
+- D9 Sandbox: E2B — Proposed; BLOCKED (no key/authorization; pricing/limits unverified).
+- D10 Neon isolation strategy (project-per-tenant vs branch vs schema) — Proposed; BLOCKED on authorization; decide with cost data.
+- D11 AI provider: Vercel AI SDK + one real provider + labelled deterministic dev adapter — Proposed.

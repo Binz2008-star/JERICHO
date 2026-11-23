@@ -1,0 +1,22 @@
+{
+  "name": "@jericho/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p . --noEmit",
+    "test": "vitest run",
+    "build": "tsc -p . --noEmit && node scripts/build.mjs",
+    "dev": "node --experimental-strip-types src/server.ts",
+    "start": "node --experimental-strip-types dist/server.ts",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.11",
+    "@jericho/shared": "workspace:*",
+    "hono": "^4.13.20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  }
+}
